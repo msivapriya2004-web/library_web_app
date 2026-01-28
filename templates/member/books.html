@@ -1,28 +1,19 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
+{% block content %}
+<h2>Available Books</h2>
 
-<head>
-    <title>Available Books</title>
-</head>
-
-<body>
-
-    <h2>Available Books</h2>
-
-    {% if books %}
-    <ul>
-        {% for book in books %}
-        <li>
-            <strong>Title:</strong> {{ book.title }} <br>
-            <strong>Author:</strong> {{ book.author }}
-        </li>
-        <hr>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>No books available.</p>
-    {% endif %}
-
-</body>
-
-</html>
+<table border="1">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Action</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td><a href="/member/borrow/{{ book.id }}">Borrow</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

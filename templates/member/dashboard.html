@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Member Dashboard</title>
-</head>
-
-<body>
-
-    <h2>Member Dashboard</h2>
-    <p>Welcome {{ user }} (Role: {{ role }})</p>
-
-    <ul>
-        <li><a href="{{ url_for('member.books') }}">View Available Books</a></li>
-        <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
-    </ul>
-
-</body>
-
-</html>
+{% extends "base.html" %}
+{% block content %}
+<h2>Member Dashboard</h2>
+<a href="/member/books">View Available Books</a>
+{% endblock %}
