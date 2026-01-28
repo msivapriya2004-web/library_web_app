@@ -1,0 +1,76 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Headings */
+h2 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Navigation links */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Forms */
+form {
+    margin: 15px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+button {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #0066cc;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004c99;
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0;
+    padding: 6px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Flash messages */
+ul li.success {
+    color: green;
+    font-weight: bold;
+}
+
+ul li.danger {
+    color: red;
+    font-weight: bold;
+}
