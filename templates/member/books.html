@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Available Books</title>
+</head>
+
+<body>
+
+    <h2>Available Books</h2>
+
+    {% if books %}
+    <ul>
+        {% for book in books %}
+        <li>
+            <strong>Title:</strong> {{ book.title }} <br>
+            <strong>Author:</strong> {{ book.author }}
+        </li>
+        <hr>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No books available.</p>
+    {% endif %}
+
+</body>
+
+</html>
